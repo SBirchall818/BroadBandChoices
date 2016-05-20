@@ -35,7 +35,7 @@ namespace BasketLogicTests
         public void CallingTotalShouldCalculateTotal()
         {
             Mock<IRulesEngine> mockRulesEngine = new Mock<IRulesEngine>();
-            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<IList<IRule>>())).Returns(0.0f);
+            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>())).Returns(0.0f);
             Basket basket = new Basket(mockRulesEngine.Object);
             float result = basket.Total;
             Assert.AreEqual(0f, result);
@@ -45,21 +45,24 @@ namespace BasketLogicTests
         public void TotalOfButterMilkBreadShouldBeAccurate()
         {
             Mock<IRulesEngine> mockRulesEngine = new Mock<IRulesEngine>();
-            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<IList<IRule>>())).Returns(0.0f);
+            ButterItem butterItem = new ButterItem();
+            MilkItem milkItem = new MilkItem();
+            BreadItem breadItem = new BreadItem();
+            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>())).Returns(0.0f);
             Basket basket = new Basket(mockRulesEngine.Object);
-            basket.AddItem(new ButterItem());
-            basket.AddItem(new MilkItem());
-            basket.AddItem(new BreadItem());
+            basket.AddItem(butterItem);
+            basket.AddItem(milkItem);
+            basket.AddItem(breadItem);
 
             float result = basket.Total;
-            Assert.AreEqual(2.95f, result);
+            Assert.AreEqual(butterItem.Cost + milkItem.Cost + breadItem.Cost, result);
         }
 
         [TestMethod]
         public void BasketCanBeCreatedWithGenericRulesEngine()
         {
             Mock<IRulesEngine> mockRulesEngine = new Mock<IRulesEngine>();
-            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<IList<IRule>>())).Returns(0.0f);
+            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>())).Returns(0.0f);
             Basket basket = new Basket(mockRulesEngine.Object);
         }
 
@@ -68,14 +71,14 @@ namespace BasketLogicTests
         {
             float deduction = 1.0f;
             Mock<IRulesEngine> mockRulesEngine = new Mock<IRulesEngine>();
-            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<IList<IRule>>())).Returns(-deduction);
+            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>())).Returns(-deduction);
             Basket basket = new Basket(mockRulesEngine.Object);
             MilkItem milkItem = new MilkItem();
             basket.AddItem(milkItem);
 
             float total = basket.Total;
             Assert.AreEqual(milkItem.Cost - deduction, total);
-            mockRulesEngine.Verify(m => m.ApplyRules(It.IsAny<IList<IRule>>()));
+            mockRulesEngine.Verify(m => m.ApplyRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>()));
         }
     }
 }

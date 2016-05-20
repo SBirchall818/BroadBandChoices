@@ -50,6 +50,7 @@
     <Compile Include="Rules\IRule.cs" />
     <Compile Include="Rules\IRulesEngine.cs" />
     <Compile Include="Rules\RulesEngine.cs" />
+    <Compile Include="Rules\TwoButterGetABread50PerCentOff.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

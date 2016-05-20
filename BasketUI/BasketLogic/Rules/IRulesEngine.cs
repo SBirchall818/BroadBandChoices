@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using BasketLogic.BasketItems;
+using System.Collections.Generic;
 
 namespace BasketLogic.Rules
 {
     public interface IRulesEngine
     {
-        float ApplyRules(IList<IRule> rules);
+        float ApplyRules(List<BasketItem> basketItems, IList<IRule> rules);
     }
 }
