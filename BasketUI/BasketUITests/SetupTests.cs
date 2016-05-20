@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BasketUI;
+using Moq;
+using BasketLogic.Basket;
 
 namespace BasketUITests
 {
@@ -10,7 +12,8 @@ namespace BasketUITests
         [TestMethod]
         public void BasketUICanBeInitializedWithABasket()
         {
-            BasketForm basketForm = new BasketForm(new Basket());
+            Mock<IBasket> mockBasket = new Mock<IBasket>();
+            BasketForm basketForm = new BasketForm(mockBasket.Object);
         }
     }
 }

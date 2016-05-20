@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketUI", "BasketUI\Basket
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketUITests", "BasketUITests\BasketUITests.csproj", "{4A8775EE-2CE6-4A81-9B25-4C7281FCD37C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketLogic", "BasketLogic\BasketLogic.csproj", "{5ABB16E0-BD3E-4373-BC9F-7944E177A5F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4A8775EE-2CE6-4A81-9B25-4C7281FCD37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A8775EE-2CE6-4A81-9B25-4C7281FCD37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A8775EE-2CE6-4A81-9B25-4C7281FCD37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ABB16E0-BD3E-4373-BC9F-7944E177A5F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABB16E0-BD3E-4373-BC9F-7944E177A5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABB16E0-BD3E-4373-BC9F-7944E177A5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABB16E0-BD3E-4373-BC9F-7944E177A5F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
