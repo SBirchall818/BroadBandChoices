@@ -14,6 +14,7 @@ namespace BasketLogic.Basket
         
         private List<BasketItem> _basketItems;
         private IRulesEngine _rulesEngine;
+        private IList<IRule> _rules;
 
         #endregion
 
@@ -59,6 +60,7 @@ namespace BasketLogic.Basket
             {
                 total += item.Cost;
             }
+            total += _rulesEngine.ApplyRules(_rules);
             return total;
         }
 
