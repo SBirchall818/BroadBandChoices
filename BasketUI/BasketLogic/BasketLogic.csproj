@@ -47,6 +47,8 @@
     <Compile Include="Basket\Basket.cs" />
     <Compile Include="Basket\IBasket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\IRule.cs" />
+    <Compile Include="Rules\IRulesEngine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
