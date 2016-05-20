@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BasketLogic.Basket;
+using System;
 using System.Windows.Forms;
 
 namespace BasketUI
@@ -16,7 +14,7 @@ namespace BasketUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BasketForm());
+            Application.Run(new BasketForm(new Basket()));
         }
     }
 }
