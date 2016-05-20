@@ -32,6 +32,8 @@
             this.MilkButton = new System.Windows.Forms.Button();
             this.BreadButton = new System.Windows.Forms.Button();
             this.ButterTextBox = new System.Windows.Forms.TextBox();
+            this.MilkTextBox = new System.Windows.Forms.TextBox();
+            this.BreadTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ButterButton
@@ -70,11 +72,31 @@
             this.ButterTextBox.TabIndex = 3;
             this.ButterTextBox.Text = "£0.80";
             // 
+            // MilkTextBox
+            // 
+            this.MilkTextBox.Location = new System.Drawing.Point(119, 72);
+            this.MilkTextBox.Name = "MilkTextBox";
+            this.MilkTextBox.ReadOnly = true;
+            this.MilkTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MilkTextBox.TabIndex = 4;
+            this.MilkTextBox.Text = "£1.15";
+            // 
+            // BreadTextBox
+            // 
+            this.BreadTextBox.Location = new System.Drawing.Point(119, 102);
+            this.BreadTextBox.Name = "BreadTextBox";
+            this.BreadTextBox.ReadOnly = true;
+            this.BreadTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BreadTextBox.TabIndex = 5;
+            this.BreadTextBox.Text = "£1.00";
+            // 
             // BasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.BreadTextBox);
+            this.Controls.Add(this.MilkTextBox);
             this.Controls.Add(this.ButterTextBox);
             this.Controls.Add(this.BreadButton);
             this.Controls.Add(this.MilkButton);
@@ -92,6 +114,8 @@
         public System.Windows.Forms.Button MilkButton;
         public System.Windows.Forms.Button BreadButton;
         public System.Windows.Forms.TextBox ButterTextBox;
+        public System.Windows.Forms.TextBox MilkTextBox;
+        public System.Windows.Forms.TextBox BreadTextBox;
     }
 }
 

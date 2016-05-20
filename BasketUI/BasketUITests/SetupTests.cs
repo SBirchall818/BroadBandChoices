@@ -57,5 +57,47 @@ namespace BasketUITests
             BasketForm basketForm = new BasketForm();
             Assert.AreEqual("£0.80", basketForm.ButterTextBox.Text);
         }
+
+        [TestMethod]
+        public void BasketUIShouldDisplayMilkCost()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsNotNull(basketForm.MilkTextBox);
+        }
+
+        [TestMethod]
+        public void MilkCostShouldNotBeEditable()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsTrue(basketForm.MilkTextBox.ReadOnly);
+        }
+
+        [TestMethod]
+        public void MilkCostShouldHaveTheCostHardCoded()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.AreEqual("£1.15", basketForm.MilkTextBox.Text);
+        }
+
+        [TestMethod]
+        public void BasketUIShouldDisplayBreadCost()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsNotNull(basketForm.BreadTextBox);
+        }
+
+        [TestMethod]
+        public void BreadCostShouldNotBeEditable()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsTrue(basketForm.BreadTextBox.ReadOnly);
+        }
+
+        [TestMethod]
+        public void BreadCostShouldHaveTheCostHardCoded()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.AreEqual("£1.00", basketForm.BreadTextBox.Text);
+        }
     }
 }
