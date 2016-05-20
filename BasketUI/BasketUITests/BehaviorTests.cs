@@ -19,5 +19,13 @@ namespace BasketUITests
             basketForm.ButterButton_Click(null, null);
             mockBasket.Verify(m => m.AddItem(It.IsAny<ButterItem>()));
         }
+
+        [TestMethod]
+        public void ClickingButterButtonShouldUpdateTheTotal()
+        {
+            BasketForm basketForm = new BasketForm();
+            basketForm.ButterButton_Click(null, null);
+            Assert.AreEqual("£1.15", basketForm.TotalTextBox.Text);
+        }
     }
 }
