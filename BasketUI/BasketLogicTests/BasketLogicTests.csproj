@@ -53,6 +53,12 @@
     <Compile Include="BasketTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasketLogic\BasketLogic.csproj">
+      <Project>{5abb16e0-bd3e-4373-bc9f-7944e177a5f5}</Project>
+      <Name>BasketLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

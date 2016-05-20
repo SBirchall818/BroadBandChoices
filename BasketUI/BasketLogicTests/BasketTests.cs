@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using BasketLogic.Basket;
+using BasketLogic.BasketItems;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BasketLogicTests
 {
@@ -9,7 +11,7 @@ namespace BasketLogicTests
         public void ShouldBeAbleToAddBreadItemToBasket()
         {
             Basket basket = new Basket();
-            Assert.IsNotNull(basket.Items)
+            basket.AddItem(new BreadItem());
         }
     }
 }
