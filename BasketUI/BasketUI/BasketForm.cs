@@ -43,6 +43,11 @@ namespace BasketUI
             UpdateTotal();
         }
 
+        public void BreadButton_Click(object sender, EventArgs e)
+        {
+            _basket.AddItem(new BreadItem());
+        }
+
         #endregion
 
         #region Private

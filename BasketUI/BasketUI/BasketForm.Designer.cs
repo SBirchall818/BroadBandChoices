@@ -67,6 +67,7 @@
             this.BreadButton.TabIndex = 2;
             this.BreadButton.Text = "Bread";
             this.BreadButton.UseVisualStyleBackColor = true;
+            this.BreadButton.Click += new System.EventHandler(this.BreadButton_Click);
             // 
             // ButterTextBox
             // 
