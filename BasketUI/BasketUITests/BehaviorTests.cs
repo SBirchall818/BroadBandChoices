@@ -23,8 +23,12 @@ namespace BasketUITests
         [TestMethod]
         public void ClickingButterButtonShouldUpdateTheTotal()
         {
-            BasketForm basketForm = new BasketForm();
+            Mock<IBasket> mockBasket = new Mock<IBasket>();
+            mockBasket.SetupGet(m => m.Total).Returns(1.15f);
+            BasketForm basketForm = new BasketForm(mockBasket.Object);
             basketForm.ButterButton_Click(null, null);
+
+            mockBasket.VerifyGet(m => m.Total);
             Assert.AreEqual("£1.15", basketForm.TotalTextBox.Text);
         }
     }

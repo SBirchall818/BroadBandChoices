@@ -9,6 +9,7 @@ namespace BasketLogic.Basket
 {
     public interface IBasket
     {
+        float Total { get; }
         void AddItem(BasketItem basketItem);
     }
 }
