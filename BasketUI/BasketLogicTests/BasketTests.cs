@@ -8,6 +8,20 @@ namespace BasketLogicTests
     public class BasketTests
     {
         [TestMethod]
+        public void ShouldBeAbleToAddButterItemToBasket()
+        {
+            Basket basket = new Basket();
+            basket.AddItem(new ButterItem());
+        }
+
+        [TestMethod]
+        public void ShouldBeAbleToAddMilkItemToBasket()
+        {
+            Basket basket = new Basket();
+            basket.AddItem(new MilkItem());
+        }
+
+        [TestMethod]
         public void ShouldBeAbleToAddBreadItemToBasket()
         {
             Basket basket = new Basket();
