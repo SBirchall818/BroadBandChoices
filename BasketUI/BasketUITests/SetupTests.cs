@@ -9,6 +9,18 @@ namespace BasketUITests
     [TestClass]
     public class SetupTests
     {
+        #region Fields
+
+        private BasketForm _basketForm;
+
+        #endregion
+
+        [TestInitialize]
+        public void BeforeAllTests()
+        {
+            _basketForm = new BasketForm();
+        }
+
         [TestMethod]
         public void BasketUICanBeInitializedWithABasket()
         {
@@ -19,127 +31,109 @@ namespace BasketUITests
         [TestMethod]
         public void BasketUIShouldHaveAButterButton()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.ButterButton);
+            Assert.IsNotNull(_basketForm.ButterButton);
         }
 
         [TestMethod]
         public void BasketUIShouldHaveAMilkButton()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.MilkButton);
+            Assert.IsNotNull(_basketForm.MilkButton);
         }
 
         [TestMethod]
         public void BasketUIShouldHaveABreadButton()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.BreadButton);
+            Assert.IsNotNull(_basketForm.BreadButton);
         }
 
         [TestMethod]
         public void BasketUIShouldDisplayButterCost()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.ButterTextBox);
+            Assert.IsNotNull(_basketForm.ButterTextBox);
         }
 
         [TestMethod]
         public void ButterCostShouldNotBeEditable()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsTrue(basketForm.ButterTextBox.ReadOnly);
+            Assert.IsTrue(_basketForm.ButterTextBox.ReadOnly);
         }
 
         [TestMethod]
         public void ButterCostShouldHaveTheCostHardCoded()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.AreEqual("£0.80", basketForm.ButterTextBox.Text);
+            Assert.AreEqual("£0.80", _basketForm.ButterTextBox.Text);
         }
 
         [TestMethod]
         public void BasketUIShouldDisplayMilkCost()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.MilkTextBox);
+            Assert.IsNotNull(_basketForm.MilkTextBox);
         }
 
         [TestMethod]
         public void MilkCostShouldNotBeEditable()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsTrue(basketForm.MilkTextBox.ReadOnly);
+            Assert.IsTrue(_basketForm.MilkTextBox.ReadOnly);
         }
 
         [TestMethod]
         public void MilkCostShouldHaveTheCostHardCoded()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.AreEqual("£1.15", basketForm.MilkTextBox.Text);
+            Assert.AreEqual("£1.15", _basketForm.MilkTextBox.Text);
         }
 
         [TestMethod]
         public void BasketUIShouldDisplayBreadCost()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.BreadTextBox);
+            Assert.IsNotNull(_basketForm.BreadTextBox);
         }
 
         [TestMethod]
         public void BreadCostShouldNotBeEditable()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsTrue(basketForm.BreadTextBox.ReadOnly);
+            Assert.IsTrue(_basketForm.BreadTextBox.ReadOnly);
         }
 
         [TestMethod]
         public void BreadCostShouldHaveTheCostHardCoded()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.AreEqual("£1.00", basketForm.BreadTextBox.Text);
+            Assert.AreEqual("£1.00", _basketForm.BreadTextBox.Text);
         }
 
         [TestMethod]
         public void BasketUIShouldDisplayOffers()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.OffersTextBox);
+            Assert.IsNotNull(_basketForm.OffersTextBox);
         }
 
         [TestMethod]
         public void OffersShouldNotBeEditable()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsTrue(basketForm.OffersTextBox.ReadOnly);
+            Assert.IsTrue(_basketForm.OffersTextBox.ReadOnly);
         }
 
         [TestMethod]
         public void BasketUIShouldDisplayTotalLabel()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.TotalLabel);
+            Assert.IsNotNull(_basketForm.TotalLabel);
         }
 
         [TestMethod]
         public void BasketUIShouldDisplayTotalTextBox()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsNotNull(basketForm.TotalTextBox);
+            Assert.IsNotNull(_basketForm.TotalTextBox);
         }
 
         [TestMethod]
         public void TotalTextBoxShouldBeNonEditable()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.IsTrue(basketForm.TotalTextBox.ReadOnly);
+            Assert.IsTrue(_basketForm.TotalTextBox.ReadOnly);
         }
 
         [TestMethod]
         public void TotalTextBoxShouldHaveInitialDisplayOfZeroPounds()
         {
-            BasketForm basketForm = new BasketForm();
-            Assert.AreEqual("£0.00", basketForm.TotalTextBox.Text);
+            Assert.AreEqual("£0.00", _basketForm.TotalTextBox.Text);
         }
     }
 }
