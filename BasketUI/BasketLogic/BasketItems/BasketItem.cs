@@ -8,5 +8,6 @@ namespace BasketLogic.BasketItems
 {
     public abstract class BasketItem
     {
+        public float Cost { get; }
     }
 }

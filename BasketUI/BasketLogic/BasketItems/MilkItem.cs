@@ -8,5 +8,12 @@ namespace BasketLogic.BasketItems
 {
     public class MilkItem: BasketItem
     {
+        public float Cost
+        {
+            get
+            {
+                return 1.15f;
+            }
+        }
     }
 }

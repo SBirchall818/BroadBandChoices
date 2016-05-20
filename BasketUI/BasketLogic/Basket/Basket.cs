@@ -10,7 +10,7 @@ namespace BasketLogic.Basket
     public class Basket : IBasket
     {
         #region Fields
-
+        
         private List<BasketItem> _basketItems;
 
         #endregion
@@ -30,13 +30,27 @@ namespace BasketLogic.Basket
         {
             get
             {
-                throw new NotImplementedException();
+                return CalculateTotal();
             }
         }
 
         public void AddItem(BasketItem basketItem)
         {
             _basketItems.Add(basketItem);
+        }
+
+        #endregion
+
+        #region Private
+
+        private float CalculateTotal()
+        {
+            float total = 0f;
+            foreach(BasketItem item in _basketItems)
+            {
+                total += item.Cost;
+            }
+            return total;
         }
 
         #endregion

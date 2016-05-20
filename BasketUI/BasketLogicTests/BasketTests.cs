@@ -33,6 +33,7 @@ namespace BasketLogicTests
         {
             Basket basket = new Basket();
             float result = basket.Total;
+            Assert.AreEqual(0f, result);
         }
     }
 }
