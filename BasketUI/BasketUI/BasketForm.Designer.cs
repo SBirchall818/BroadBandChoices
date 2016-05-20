@@ -34,6 +34,7 @@
             this.ButterTextBox = new System.Windows.Forms.TextBox();
             this.MilkTextBox = new System.Windows.Forms.TextBox();
             this.BreadTextBox = new System.Windows.Forms.TextBox();
+            this.OffersTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ButterButton
@@ -65,7 +66,7 @@
             // 
             // ButterTextBox
             // 
-            this.ButterTextBox.Location = new System.Drawing.Point(119, 44);
+            this.ButterTextBox.Location = new System.Drawing.Point(144, 42);
             this.ButterTextBox.Name = "ButterTextBox";
             this.ButterTextBox.ReadOnly = true;
             this.ButterTextBox.Size = new System.Drawing.Size(100, 20);
@@ -74,7 +75,7 @@
             // 
             // MilkTextBox
             // 
-            this.MilkTextBox.Location = new System.Drawing.Point(119, 72);
+            this.MilkTextBox.Location = new System.Drawing.Point(144, 70);
             this.MilkTextBox.Name = "MilkTextBox";
             this.MilkTextBox.ReadOnly = true;
             this.MilkTextBox.Size = new System.Drawing.Size(100, 20);
@@ -83,18 +84,30 @@
             // 
             // BreadTextBox
             // 
-            this.BreadTextBox.Location = new System.Drawing.Point(119, 102);
+            this.BreadTextBox.Location = new System.Drawing.Point(144, 104);
             this.BreadTextBox.Name = "BreadTextBox";
             this.BreadTextBox.ReadOnly = true;
             this.BreadTextBox.Size = new System.Drawing.Size(100, 20);
             this.BreadTextBox.TabIndex = 5;
             this.BreadTextBox.Text = "£1.00";
             // 
+            // OffersTextBox
+            // 
+            this.OffersTextBox.Location = new System.Drawing.Point(37, 151);
+            this.OffersTextBox.Multiline = true;
+            this.OffersTextBox.Name = "OffersTextBox";
+            this.OffersTextBox.ReadOnly = true;
+            this.OffersTextBox.Size = new System.Drawing.Size(207, 40);
+            this.OffersTextBox.TabIndex = 6;
+            this.OffersTextBox.Text = "Buy 2 Butter and get a Bread at 50% off\r\nBuy 3 Milk and get the 4th milk for free" +
+    "\r\n";
+            // 
             // BasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(299, 261);
+            this.Controls.Add(this.OffersTextBox);
             this.Controls.Add(this.BreadTextBox);
             this.Controls.Add(this.MilkTextBox);
             this.Controls.Add(this.ButterTextBox);
@@ -116,6 +129,7 @@
         public System.Windows.Forms.TextBox ButterTextBox;
         public System.Windows.Forms.TextBox MilkTextBox;
         public System.Windows.Forms.TextBox BreadTextBox;
+        public System.Windows.Forms.TextBox OffersTextBox;
     }
 }
 

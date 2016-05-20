@@ -99,5 +99,19 @@ namespace BasketUITests
             BasketForm basketForm = new BasketForm();
             Assert.AreEqual("£1.00", basketForm.BreadTextBox.Text);
         }
+
+        [TestMethod]
+        public void BasketUIShouldDisplayOffers()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsNotNull(basketForm.OffersTextBox);
+        }
+
+        [TestMethod]
+        public void OffersShouldNotBeEditable()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsTrue(basketForm.OffersTextBox.ReadOnly);
+        }
     }
 }
