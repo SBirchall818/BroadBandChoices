@@ -30,6 +30,7 @@
         {
             this.ButterButton = new System.Windows.Forms.Button();
             this.MilkButton = new System.Windows.Forms.Button();
+            this.BreadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ButterButton
@@ -50,11 +51,21 @@
             this.MilkButton.Text = "Milk";
             this.MilkButton.UseVisualStyleBackColor = true;
             // 
+            // BreadButton
+            // 
+            this.BreadButton.Location = new System.Drawing.Point(37, 102);
+            this.BreadButton.Name = "BreadButton";
+            this.BreadButton.Size = new System.Drawing.Size(75, 23);
+            this.BreadButton.TabIndex = 2;
+            this.BreadButton.Text = "Bread";
+            this.BreadButton.UseVisualStyleBackColor = true;
+            // 
             // BasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.BreadButton);
             this.Controls.Add(this.MilkButton);
             this.Controls.Add(this.ButterButton);
             this.Name = "BasketForm";
@@ -67,6 +78,7 @@
 
         public System.Windows.Forms.Button ButterButton;
         public System.Windows.Forms.Button MilkButton;
+        public System.Windows.Forms.Button BreadButton;
     }
 }
 
