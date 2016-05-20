@@ -36,5 +36,124 @@ namespace BasketLogicTests
             float expected = -milkItemD.Cost;
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void AppliesIfThereAreSevenMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            basketItems.Add(milkItemA);
+            for(int i=0; i<6; i++)
+            {
+                basketItems.Add(new MilkItem());
+            }
+
+            float result = rule.Apply(basketItems);
+            float expected = -milkItemA.Cost;
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void AppliesIfThereAreEightMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            basketItems.Add(milkItemA);
+            for (int i = 0; i < 7; i++)
+            {
+                basketItems.Add(new MilkItem());
+            }
+
+            float result = rule.Apply(basketItems);
+            float expected = -milkItemA.Cost * 2.0f;
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void AppliesIfThereAreNineMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            basketItems.Add(milkItemA);
+            for (int i = 0; i < 8; i++)
+            {
+                basketItems.Add(new MilkItem());
+            }
+
+            float result = rule.Apply(basketItems);
+            float expected = -milkItemA.Cost * 2.0f;
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void AppliesIfThereAreTwelveMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            basketItems.Add(milkItemA);
+            for (int i = 0; i < 11; i++)
+            {
+                basketItems.Add(new MilkItem());
+            }
+
+            float result = rule.Apply(basketItems);
+            float expected = -milkItemA.Cost * 3.0f;
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void AppliesIfThereAreFifteenMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            basketItems.Add(milkItemA);
+            for (int i = 0; i < 14; i++)
+            {
+                basketItems.Add(new MilkItem());
+            }
+
+            float result = rule.Apply(basketItems);
+            float expected = -milkItemA.Cost * 3.0f;
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void AppliesIfThereAreTwentyMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            basketItems.Add(milkItemA);
+            for (int i = 0; i < 19; i++)
+            {
+                basketItems.Add(new MilkItem());
+            }
+
+            float result = rule.Apply(basketItems);
+            float expected = -milkItemA.Cost * 5.0f;
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void AppliesIfThereAreTwentyOneMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            basketItems.Add(milkItemA);
+            for (int i = 0; i < 20; i++)
+            {
+                basketItems.Add(new MilkItem());
+            }
+
+            float result = rule.Apply(basketItems);
+            float expected = -milkItemA.Cost * 5.0f;
+            Assert.AreEqual(expected, result);
+        }
     }
 }
