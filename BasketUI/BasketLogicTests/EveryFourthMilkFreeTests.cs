@@ -17,5 +17,24 @@ namespace BasketLogicTests
             float result = rule.Apply(basketItems);
             Assert.AreEqual(0.0f, result);
         }
+
+        [TestMethod]
+        public void AppliesIfThereAreFourMilks()
+        {
+            EveryFourthMilkFree rule = new EveryFourthMilkFree();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            MilkItem milkItemA = new MilkItem();
+            MilkItem milkItemB = new MilkItem();
+            MilkItem milkItemC = new MilkItem();
+            MilkItem milkItemD = new MilkItem();
+            basketItems.Add(milkItemA);
+            basketItems.Add(milkItemB);
+            basketItems.Add(milkItemC);
+            basketItems.Add(milkItemD);
+
+            float result = rule.Apply(basketItems);
+            float expected = milkItemA.Cost + milkItemB.Cost + milkItemC.Cost;
+            Assert.AreEqual(expected, result);
+        }
     }
 }
