@@ -8,7 +8,7 @@ namespace BasketLogic.BasketItems
 {
     public class BreadItem: BasketItem
     {
-        public float Cost
+        public override float Cost
         {
             get
             {

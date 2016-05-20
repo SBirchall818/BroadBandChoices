@@ -35,5 +35,17 @@ namespace BasketLogicTests
             float result = basket.Total;
             Assert.AreEqual(0f, result);
         }
+
+        [TestMethod]
+        public void TotalOfButterMilkBreadShouldBeAccurate()
+        {
+            Basket basket = new Basket();
+            basket.AddItem(new ButterItem());
+            basket.AddItem(new MilkItem());
+            basket.AddItem(new BreadItem());
+
+            float result = basket.Total;
+            Assert.AreEqual(2.95f, result);
+        }
     }
 }
