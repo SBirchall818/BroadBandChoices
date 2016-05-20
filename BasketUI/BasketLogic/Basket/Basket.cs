@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BasketLogic.BasketItems;
+using BasketLogic.Rules;
 
 namespace BasketLogic.Basket
 {
@@ -12,6 +13,7 @@ namespace BasketLogic.Basket
         #region Fields
         
         private List<BasketItem> _basketItems;
+        private IRulesEngine _rulesEngine;
 
         #endregion
 
@@ -20,11 +22,18 @@ namespace BasketLogic.Basket
         public Basket()
         {
             _basketItems = new List<BasketItem>();
+            _rulesEngine = new RulesEngine();
+        }
+
+        public Basket(IRulesEngine rulesEngine)
+        {
+            _basketItems = new List<BasketItem>();
+            _rulesEngine = rulesEngine;
         }
 
         #endregion
 
-        #region Interface Members
+        #region Interface
 
         public float Total
         {
