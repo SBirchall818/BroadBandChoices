@@ -15,5 +15,12 @@ namespace BasketUITests
             Mock<IBasket> mockBasket = new Mock<IBasket>();
             BasketForm basketForm = new BasketForm(mockBasket.Object);
         }
+
+        [TestMethod]
+        public void BasketUIShouldHaveAButterButton()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsNotNull(basketForm.ButterButton);
+        }
     }
 }
