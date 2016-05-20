@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BasketLogic.BasketItems;
 using System.Collections.Generic;
+using BasketLogic.Rules;
 
 namespace BasketLogicTests
 {
