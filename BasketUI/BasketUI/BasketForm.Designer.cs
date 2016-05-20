@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ButterButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // ButterButton
+            // 
+            this.ButterButton.Location = new System.Drawing.Point(37, 42);
+            this.ButterButton.Name = "ButterButton";
+            this.ButterButton.Size = new System.Drawing.Size(75, 23);
+            this.ButterButton.TabIndex = 0;
+            this.ButterButton.Text = "Butter";
+            this.ButterButton.UseVisualStyleBackColor = true;
             // 
             // BasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.ButterButton);
             this.Name = "BasketForm";
             this.Text = "BasketApp";
             this.ResumeLayout(false);
@@ -42,6 +53,8 @@
         }
 
         #endregion
+
+        public System.Windows.Forms.Button ButterButton;
     }
 }
 
