@@ -29,5 +29,12 @@ namespace BasketUITests
             BasketForm basketForm = new BasketForm();
             Assert.IsNotNull(basketForm.MilkButton);
         }
+
+        [TestMethod]
+        public void BasketUIShouldHaveABreadButton()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsNotNull(basketForm.BreadButton);
+        }
     }
 }
