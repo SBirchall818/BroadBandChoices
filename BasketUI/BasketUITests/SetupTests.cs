@@ -113,5 +113,33 @@ namespace BasketUITests
             BasketForm basketForm = new BasketForm();
             Assert.IsTrue(basketForm.OffersTextBox.ReadOnly);
         }
+
+        [TestMethod]
+        public void BasketUIShouldDisplayTotalLabel()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsNotNull(basketForm.TotalLabel);
+        }
+
+        [TestMethod]
+        public void BasketUIShouldDisplayTotalTextBox()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsNotNull(basketForm.TotalTextBox);
+        }
+
+        [TestMethod]
+        public void TotalTextBoxShouldBeNonEditable()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.IsTrue(basketForm.TotalTextBox.ReadOnly);
+        }
+
+        [TestMethod]
+        public void TotalTextBoxShouldHaveInitialDisplayOfZeroPounds()
+        {
+            BasketForm basketForm = new BasketForm();
+            Assert.AreEqual("£0.00", basketForm.TotalTextBox.Text);
+        }
     }
 }

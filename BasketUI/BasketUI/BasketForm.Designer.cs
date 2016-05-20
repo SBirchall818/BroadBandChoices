@@ -35,6 +35,8 @@
             this.MilkTextBox = new System.Windows.Forms.TextBox();
             this.BreadTextBox = new System.Windows.Forms.TextBox();
             this.OffersTextBox = new System.Windows.Forms.TextBox();
+            this.TotalLabel = new System.Windows.Forms.Label();
+            this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ButterButton
@@ -102,11 +104,31 @@
             this.OffersTextBox.Text = "Buy 2 Butter and get a Bread at 50% off\r\nBuy 3 Milk and get the 4th milk for free" +
     "\r\n";
             // 
+            // TotalLabel
+            // 
+            this.TotalLabel.AutoSize = true;
+            this.TotalLabel.Location = new System.Drawing.Point(81, 213);
+            this.TotalLabel.Name = "TotalLabel";
+            this.TotalLabel.Size = new System.Drawing.Size(31, 13);
+            this.TotalLabel.TabIndex = 7;
+            this.TotalLabel.Text = "Total";
+            // 
+            // TotalTextBox
+            // 
+            this.TotalTextBox.Location = new System.Drawing.Point(144, 213);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
+            this.TotalTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TotalTextBox.TabIndex = 8;
+            this.TotalTextBox.Text = "£0.00";
+            // 
             // BasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 261);
+            this.Controls.Add(this.TotalTextBox);
+            this.Controls.Add(this.TotalLabel);
             this.Controls.Add(this.OffersTextBox);
             this.Controls.Add(this.BreadTextBox);
             this.Controls.Add(this.MilkTextBox);
@@ -130,6 +152,8 @@
         public System.Windows.Forms.TextBox MilkTextBox;
         public System.Windows.Forms.TextBox BreadTextBox;
         public System.Windows.Forms.TextBox OffersTextBox;
+        public System.Windows.Forms.Label TotalLabel;
+        public System.Windows.Forms.TextBox TotalTextBox;
     }
 }
 
