@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasketItems\BasketItem.cs" />
+    <Compile Include="BasketItems\ButterItem.cs" />
     <Compile Include="Basket\IBasket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

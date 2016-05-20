@@ -47,6 +47,7 @@
             this.ButterButton.TabIndex = 0;
             this.ButterButton.Text = "Butter";
             this.ButterButton.UseVisualStyleBackColor = true;
+            this.ButterButton.Click += new System.EventHandler(this.ButterButton_Click);
             // 
             // MilkButton
             // 
