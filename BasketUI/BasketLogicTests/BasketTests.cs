@@ -58,5 +58,15 @@ namespace BasketLogicTests
             mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<IList<IRule>>())).Returns(0.0f);
             Basket basket = new Basket(mockRulesEngine.Object);
         }
+
+        [TestMethod]
+        public void AppliedRulesModifyTotals()
+        {
+            Mock<IRulesEngine> mockRulesEngine = new Mock<IRulesEngine>();
+            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<IList<IRule>>())).Returns(0.0f);
+            Basket basket = new Basket(mockRulesEngine.Object);
+
+            mockRulesEngine.Verify(m => m.ApplyRules(It.IsAny<IList<IRule>>()));
+        }
     }
 }
