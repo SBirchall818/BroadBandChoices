@@ -33,7 +33,7 @@ namespace BasketLogicTests
             basketItems.Add(milkItemD);
 
             float result = rule.Apply(basketItems);
-            float expected = milkItemA.Cost + milkItemB.Cost + milkItemC.Cost;
+            float expected = -milkItemD.Cost;
             Assert.AreEqual(expected, result);
         }
     }
