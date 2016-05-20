@@ -40,6 +40,7 @@ namespace BasketUI
         public void MilkButton_Click(object sender, EventArgs e)
         {
             _basket.AddItem(new MilkItem());
+            UpdateTotal();
         }
 
         #endregion
