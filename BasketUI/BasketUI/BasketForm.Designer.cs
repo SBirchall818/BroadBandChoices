@@ -57,6 +57,7 @@
             this.MilkButton.TabIndex = 1;
             this.MilkButton.Text = "Milk";
             this.MilkButton.UseVisualStyleBackColor = true;
+            this.MilkButton.Click += new System.EventHandler(this.MilkButton_Click);
             // 
             // BreadButton
             // 

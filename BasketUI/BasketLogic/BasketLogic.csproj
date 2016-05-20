@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BasketItems\BasketItem.cs" />
     <Compile Include="BasketItems\ButterItem.cs" />
+    <Compile Include="BasketItems\MilkItem.cs" />
     <Compile Include="Basket\IBasket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
