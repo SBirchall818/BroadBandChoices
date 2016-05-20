@@ -46,6 +46,7 @@ namespace BasketUI
         public void BreadButton_Click(object sender, EventArgs e)
         {
             _basket.AddItem(new BreadItem());
+            UpdateTotal();
         }
 
         #endregion
