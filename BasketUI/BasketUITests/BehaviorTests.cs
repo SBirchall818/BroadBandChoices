@@ -31,5 +31,15 @@ namespace BasketUITests
             mockBasket.VerifyGet(m => m.Total);
             Assert.AreEqual("£1.15", basketForm.TotalTextBox.Text);
         }
+
+        [TestMethod]
+        public void ClickingMilkButtonShouldAddMilkItemToBasket()
+        {
+            Mock<IBasket> mockBasket = new Mock<IBasket>();
+            mockBasket.Setup(m => m.AddItem(It.IsAny<BasketItem>()));
+            BasketForm basketForm = new BasketForm(mockBasket.Object);
+            basketForm.MilkButton_Click(null, null);
+            mockBasket.Verify(m => m.AddItem(It.IsAny<MilkItem>()));
+        }
     }
 }
