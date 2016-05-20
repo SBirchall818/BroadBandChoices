@@ -14,7 +14,8 @@ namespace BasketLogic.Rules
 
         public float Apply(IList<BasketItem> basketItems)
         {
-            throw new NotImplementedException();
+            float adjustment = 0.0f;
+            return adjustment;
         }
 
         #endregion
