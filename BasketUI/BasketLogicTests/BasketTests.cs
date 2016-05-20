@@ -27,5 +27,12 @@ namespace BasketLogicTests
             Basket basket = new Basket();
             basket.AddItem(new BreadItem());
         }
+
+        [TestMethod]
+        public void CallingTotalShouldCalculateTotal()
+        {
+            Basket basket = new Basket();
+            float result = basket.Total;
+        }
     }
 }
