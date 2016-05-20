@@ -15,6 +15,9 @@ namespace BasketLogic.Rules
         public float Apply(IList<BasketItem> basketItems)
         {
             float adjustment = 0.0f;
+
+
+
             return adjustment;
         }
 
