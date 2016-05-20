@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.ButterButton = new System.Windows.Forms.Button();
+            this.MilkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ButterButton
@@ -40,11 +41,21 @@
             this.ButterButton.Text = "Butter";
             this.ButterButton.UseVisualStyleBackColor = true;
             // 
+            // MilkButton
+            // 
+            this.MilkButton.Location = new System.Drawing.Point(37, 72);
+            this.MilkButton.Name = "MilkButton";
+            this.MilkButton.Size = new System.Drawing.Size(75, 23);
+            this.MilkButton.TabIndex = 1;
+            this.MilkButton.Text = "Milk";
+            this.MilkButton.UseVisualStyleBackColor = true;
+            // 
             // BasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.MilkButton);
             this.Controls.Add(this.ButterButton);
             this.Name = "BasketForm";
             this.Text = "BasketApp";
@@ -55,6 +66,7 @@
         #endregion
 
         public System.Windows.Forms.Button ButterButton;
+        public System.Windows.Forms.Button MilkButton;
     }
 }
 
