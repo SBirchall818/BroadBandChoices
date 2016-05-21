@@ -69,6 +69,7 @@ namespace BasketLogic.Basket
         private void AddRules()
         {
             _rules = new List<IRule>();
+            _rules.Add(new TwoButterGetABread50PerCentOff());
         }
 
         #endregion
