@@ -70,6 +70,7 @@ namespace BasketLogic.Basket
         {
             _rules = new List<IRule>();
             _rules.Add(new TwoButterGetABread50PerCentOff());
+            _rules.Add(new EveryFourthMilkFree());
         }
 
         #endregion
