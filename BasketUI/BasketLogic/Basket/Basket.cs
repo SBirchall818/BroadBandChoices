@@ -24,12 +24,14 @@ namespace BasketLogic.Basket
         {
             _basketItems = new List<BasketItem>();
             _rulesEngine = new RulesEngine();
+            AddRules();
         }
 
         public Basket(IRulesEngine rulesEngine)
         {
             _basketItems = new List<BasketItem>();
             _rulesEngine = rulesEngine;
+            AddRules();
         }
 
         #endregion
@@ -62,6 +64,11 @@ namespace BasketLogic.Basket
             }
             total += _rulesEngine.ApplyRules(_basketItems, _rules);
             return total;
+        }
+
+        private void AddRules()
+        {
+            _rules = new List<IRule>();
         }
 
         #endregion
