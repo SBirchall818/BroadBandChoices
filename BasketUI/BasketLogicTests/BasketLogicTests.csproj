@@ -61,6 +61,7 @@
     <Compile Include="RulesEngineTests.cs" />
     <Compile Include="TwoButterGetABread50PerCentOffTests.cs" />
     <Compile Include="EveryFourthMilkFreeTests.cs" />
+    <Compile Include="BasketRulesIntegrationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BasketLogic\BasketLogic.csproj">
