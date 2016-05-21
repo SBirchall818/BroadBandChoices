@@ -32,5 +32,18 @@ namespace BasketLogicTests
             decimal total = basket.Total;
             Assert.AreEqual(3.10m, total);
         }
+
+        [TestMethod]
+        public void BasketHas4Milks()
+        {
+            Basket basket = new Basket();
+            basket.AddItem(new MilkItem());
+            basket.AddItem(new MilkItem());
+            basket.AddItem(new MilkItem());
+            basket.AddItem(new MilkItem());
+
+            decimal total = basket.Total;
+            Assert.AreEqual(3.45m, total);
+        }
     }
 }
