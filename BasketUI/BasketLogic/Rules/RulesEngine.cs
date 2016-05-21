@@ -16,9 +16,9 @@ namespace BasketLogic.Rules
 
         #region Interface
 
-        public float ApplyRules(List<BasketItem> basketItem, IList<IRule> rules)
+        public decimal ApplyRules(List<BasketItem> basketItem, IList<IRule> rules)
         {
-            float adjustments = 0.0f;
+            decimal adjustments = 0.0m;
             foreach(IRule rule in rules)
             {
                 adjustments += rule.Apply(basketItem);

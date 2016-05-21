@@ -11,9 +11,9 @@ namespace BasketLogic.Rules
     {
         #region Interface
 
-        public float Apply(IList<BasketItem> basketItems)
+        public decimal Apply(IList<BasketItem> basketItems)
         {
-            float adjustment = 0.0f;
+            decimal adjustment = 0.0m;
 
             int milks = 0;
 
@@ -27,7 +27,7 @@ namespace BasketLogic.Rules
 
             int numberOfMilkDeductions = milks / 4;
 
-            adjustment = -(new MilkItem()).Cost * (float)numberOfMilkDeductions;
+            adjustment = -(new MilkItem()).Cost * (decimal)numberOfMilkDeductions;
 
             return adjustment;
         }

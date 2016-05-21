@@ -36,7 +36,7 @@ namespace BasketLogic.Basket
 
         #region Interface
 
-        public float Total
+        public decimal Total
         {
             get
             {
@@ -53,9 +53,9 @@ namespace BasketLogic.Basket
 
         #region Private
 
-        private float CalculateTotal()
+        private decimal CalculateTotal()
         {
-            float total = 0f;
+            decimal total = 0m;
             foreach(BasketItem item in _basketItems)
             {
                 total += item.Cost;

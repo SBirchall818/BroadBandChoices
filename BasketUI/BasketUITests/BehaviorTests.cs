@@ -24,7 +24,7 @@ namespace BasketUITests
         public void ClickingButterButtonShouldUpdateTheTotal()
         {
             Mock<IBasket> mockBasket = new Mock<IBasket>();
-            mockBasket.SetupGet(m => m.Total).Returns(1.15f);
+            mockBasket.SetupGet(m => m.Total).Returns(1.15m);
             BasketForm basketForm = new BasketForm(mockBasket.Object);
             basketForm.ButterButton_Click(null, null);
 
@@ -46,7 +46,7 @@ namespace BasketUITests
         public void ClickingMilkButtonShouldUpdateTheTotal()
         {
             Mock<IBasket> mockBasket = new Mock<IBasket>();
-            mockBasket.SetupGet(m => m.Total).Returns(0.8f);
+            mockBasket.SetupGet(m => m.Total).Returns(0.8m);
             BasketForm basketForm = new BasketForm(mockBasket.Object);
             basketForm.MilkButton_Click(null, null);
 
@@ -68,7 +68,7 @@ namespace BasketUITests
         public void ClickingBreadkButtonShouldUpdateTheTotal()
         {
             Mock<IBasket> mockBasket = new Mock<IBasket>();
-            mockBasket.SetupGet(m => m.Total).Returns(1f);
+            mockBasket.SetupGet(m => m.Total).Returns(1.0m);
             BasketForm basketForm = new BasketForm(mockBasket.Object);
             basketForm.BreadButton_Click(null, null);
 

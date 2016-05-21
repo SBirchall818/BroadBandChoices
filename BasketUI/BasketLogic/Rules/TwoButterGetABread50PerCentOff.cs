@@ -8,9 +8,9 @@ namespace BasketLogic.Rules
 
         #region Interface
 
-        public float Apply(IList<BasketItem> basketItems)
+        public decimal Apply(IList<BasketItem> basketItems)
         {
-            float adjustment = 0.0f;
+            decimal adjustment = 0.0m;
 
             int butters = 0;
             int breads = 0;
@@ -39,7 +39,7 @@ namespace BasketLogic.Rules
                 breadsAppliedTo = maximumBreadsAppliedTo;
             }
 
-            adjustment = -(new BreadItem()).Cost / 2.0f * (float)breadsAppliedTo;
+            adjustment = -(new BreadItem()).Cost / 2.0m * (decimal)breadsAppliedTo;
 
             return adjustment;
         }

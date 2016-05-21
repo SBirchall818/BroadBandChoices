@@ -14,8 +14,8 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = new List<BasketItem>();
 
-            float result = rule.Apply(basketItems);
-            Assert.AreEqual(0.0f, result);
+            decimal result = rule.Apply(basketItems);
+            Assert.AreEqual(0.0m, result);
         }
 
         [TestMethod]
@@ -32,8 +32,8 @@ namespace BasketLogicTests
             basketItems.Add(milkItemC);
             basketItems.Add(milkItemD);
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemD.Cost;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemD.Cost;
             Assert.AreEqual(expected, result);
         }
 
@@ -49,8 +49,8 @@ namespace BasketLogicTests
             basketItems.Add(milkItemB);
             basketItems.Add(milkItemC);
 
-            float result = rule.Apply(basketItems);
-            float expected = 0.0f;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = 0.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -66,8 +66,8 @@ namespace BasketLogicTests
                 basketItems.Add(new MilkItem());
             }
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemA.Cost;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemA.Cost;
             Assert.AreEqual(expected, result);
         }
 
@@ -83,8 +83,8 @@ namespace BasketLogicTests
                 basketItems.Add(new MilkItem());
             }
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemA.Cost * 2.0f;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemA.Cost * 2.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -100,8 +100,8 @@ namespace BasketLogicTests
                 basketItems.Add(new MilkItem());
             }
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemA.Cost * 2.0f;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemA.Cost * 2.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -117,8 +117,8 @@ namespace BasketLogicTests
                 basketItems.Add(new MilkItem());
             }
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemA.Cost * 3.0f;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemA.Cost * 3.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -134,8 +134,8 @@ namespace BasketLogicTests
                 basketItems.Add(new MilkItem());
             }
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemA.Cost * 3.0f;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemA.Cost * 3.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -151,8 +151,8 @@ namespace BasketLogicTests
                 basketItems.Add(new MilkItem());
             }
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemA.Cost * 5.0f;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemA.Cost * 5.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -168,8 +168,8 @@ namespace BasketLogicTests
                 basketItems.Add(new MilkItem());
             }
 
-            float result = rule.Apply(basketItems);
-            float expected = -milkItemA.Cost * 5.0f;
+            decimal result = rule.Apply(basketItems);
+            decimal expected = -milkItemA.Cost * 5.0m;
             Assert.AreEqual(expected, result);
         }
     }
