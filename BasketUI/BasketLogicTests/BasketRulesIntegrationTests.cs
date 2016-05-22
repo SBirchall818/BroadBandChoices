@@ -12,9 +12,10 @@ namespace BasketLogicTests
         public void BasketHas1Bread1Butter1Milk()
         {
             Basket basket = new Basket();
-            basket.AddItem(new BreadItem());
-            basket.AddItem(new ButterItem());
-            basket.AddItem(new MilkItem());
+            BasketItemHelper.LoadBasketItems(ref basket,
+                butters: 1,
+                milks: 1,
+                breads: 1);
 
             decimal total = basket.Total;
             Assert.AreEqual(2.95m, total);
@@ -24,10 +25,10 @@ namespace BasketLogicTests
         public void BasketHas2ButterAnd2Bread()
         {
             Basket basket = new Basket();
-            basket.AddItem(new ButterItem());
-            basket.AddItem(new ButterItem());
-            basket.AddItem(new BreadItem());
-            basket.AddItem(new BreadItem());
+            BasketItemHelper.LoadBasketItems(ref basket, 
+                butters: 2, 
+                milks: 0,
+                breads: 2);
 
             decimal total = basket.Total;
             Assert.AreEqual(3.10m, total);
@@ -37,10 +38,10 @@ namespace BasketLogicTests
         public void BasketHas4Milks()
         {
             Basket basket = new Basket();
-            basket.AddItem(new MilkItem());
-            basket.AddItem(new MilkItem());
-            basket.AddItem(new MilkItem());
-            basket.AddItem(new MilkItem());
+            BasketItemHelper.LoadBasketItems(ref basket,
+                butters: 0,
+                milks: 4,
+                breads: 0);
 
             decimal total = basket.Total;
             Assert.AreEqual(3.45m, total);
@@ -50,13 +51,10 @@ namespace BasketLogicTests
         public void BasketHas2Butter1BreadAnd8Milk()
         {
             Basket basket = new Basket();
-            basket.AddItem(new ButterItem());
-            basket.AddItem(new ButterItem());
-            basket.AddItem(new BreadItem());
-            for (int i=0; i < 8; i++)
-            {
-                basket.AddItem(new MilkItem());
-            }
+            BasketItemHelper.LoadBasketItems(ref basket,
+                butters: 2,
+                milks: 8,
+                breads: 1);
 
             decimal total = basket.Total;
             Assert.AreEqual(9.00m, total);

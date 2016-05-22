@@ -22,18 +22,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreFourMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            MilkItem milkItemB = new MilkItem();
-            MilkItem milkItemC = new MilkItem();
-            MilkItem milkItemD = new MilkItem();
-            basketItems.Add(milkItemA);
-            basketItems.Add(milkItemB);
-            basketItems.Add(milkItemC);
-            basketItems.Add(milkItemD);
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 4, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemD.Cost;
+            decimal expected = -MilkItem.BaseCost;
             Assert.AreEqual(expected, result);
         }
 
@@ -41,13 +33,7 @@ namespace BasketLogicTests
         public void AppliesIfThereAreThreeMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            MilkItem milkItemB = new MilkItem();
-            MilkItem milkItemC = new MilkItem();
-            basketItems.Add(milkItemA);
-            basketItems.Add(milkItemB);
-            basketItems.Add(milkItemC);
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 3, 0);
 
             decimal result = rule.Apply(basketItems);
             decimal expected = 0.0m;
@@ -58,16 +44,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreSevenMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            basketItems.Add(milkItemA);
-            for(int i=0; i<6; i++)
-            {
-                basketItems.Add(new MilkItem());
-            }
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 7, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemA.Cost;
+            decimal expected = -MilkItem.BaseCost;
             Assert.AreEqual(expected, result);
         }
 
@@ -75,16 +55,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreEightMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            basketItems.Add(milkItemA);
-            for (int i = 0; i < 7; i++)
-            {
-                basketItems.Add(new MilkItem());
-            }
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 8, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemA.Cost * 2.0m;
+            decimal expected = -MilkItem.BaseCost * 2.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -92,16 +66,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreNineMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            basketItems.Add(milkItemA);
-            for (int i = 0; i < 8; i++)
-            {
-                basketItems.Add(new MilkItem());
-            }
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 9, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemA.Cost * 2.0m;
+            decimal expected = -MilkItem.BaseCost * 2.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -109,16 +77,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreTwelveMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            basketItems.Add(milkItemA);
-            for (int i = 0; i < 11; i++)
-            {
-                basketItems.Add(new MilkItem());
-            }
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 12, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemA.Cost * 3.0m;
+            decimal expected = -MilkItem.BaseCost * 3.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -126,16 +88,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreFifteenMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            basketItems.Add(milkItemA);
-            for (int i = 0; i < 14; i++)
-            {
-                basketItems.Add(new MilkItem());
-            }
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 15, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemA.Cost * 3.0m;
+            decimal expected = -MilkItem.BaseCost * 3.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -143,16 +99,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreTwentyMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            basketItems.Add(milkItemA);
-            for (int i = 0; i < 19; i++)
-            {
-                basketItems.Add(new MilkItem());
-            }
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 20, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemA.Cost * 5.0m;
+            decimal expected = -MilkItem.BaseCost * 5.0m;
             Assert.AreEqual(expected, result);
         }
 
@@ -160,16 +110,10 @@ namespace BasketLogicTests
         public void AppliesIfThereAreTwentyOneMilks()
         {
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
-            List<BasketItem> basketItems = new List<BasketItem>();
-            MilkItem milkItemA = new MilkItem();
-            basketItems.Add(milkItemA);
-            for (int i = 0; i < 20; i++)
-            {
-                basketItems.Add(new MilkItem());
-            }
+            List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 21, 0);
 
             decimal result = rule.Apply(basketItems);
-            decimal expected = -milkItemA.Cost * 5.0m;
+            decimal expected = -MilkItem.BaseCost * 5.0m;
             Assert.AreEqual(expected, result);
         }
     }

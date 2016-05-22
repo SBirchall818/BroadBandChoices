@@ -8,11 +8,13 @@ namespace BasketLogic.BasketItems
 {
     public class BreadItem: BasketItem
     {
+        public static decimal BaseCost = 1.0m;
+
         public override decimal Cost
         {
             get
             {
-                return 1.0m;
+                return BaseCost;
             }
         }
     }

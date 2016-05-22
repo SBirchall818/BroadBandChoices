@@ -50,9 +50,10 @@ namespace BasketLogicTests
             BreadItem breadItem = new BreadItem();
             mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>())).Returns(0.0m);
             Basket basket = new Basket(mockRulesEngine.Object);
-            basket.AddItem(butterItem);
-            basket.AddItem(milkItem);
-            basket.AddItem(breadItem);
+            BasketItemHelper.LoadBasketItems(ref basket,
+                butters: 1,
+                milks: 1,
+                breads: 1);
 
             decimal result = basket.Total;
             Assert.AreEqual(butterItem.Cost + milkItem.Cost + breadItem.Cost, result);

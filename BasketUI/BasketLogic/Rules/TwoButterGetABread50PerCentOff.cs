@@ -39,7 +39,7 @@ namespace BasketLogic.Rules
                 breadsAppliedTo = maximumBreadsAppliedTo;
             }
 
-            adjustment = -(new BreadItem()).Cost / 2.0m * (decimal)breadsAppliedTo;
+            adjustment = -BreadItem.BaseCost / 2.0m * (decimal)breadsAppliedTo;
 
             return adjustment;
         }
