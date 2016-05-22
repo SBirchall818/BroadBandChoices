@@ -14,7 +14,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = new List<BasketItem>();
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             Assert.AreEqual(0.0m, result);
         }
 
@@ -24,7 +24,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 4, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost;
             Assert.AreEqual(expected, result);
         }
@@ -35,7 +35,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 3, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = 0.0m;
             Assert.AreEqual(expected, result);
         }
@@ -46,7 +46,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 7, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost;
             Assert.AreEqual(expected, result);
         }
@@ -57,7 +57,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 8, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost * 2.0m;
             Assert.AreEqual(expected, result);
         }
@@ -68,7 +68,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 9, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost * 2.0m;
             Assert.AreEqual(expected, result);
         }
@@ -79,7 +79,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 12, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost * 3.0m;
             Assert.AreEqual(expected, result);
         }
@@ -90,7 +90,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 15, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost * 3.0m;
             Assert.AreEqual(expected, result);
         }
@@ -101,7 +101,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 20, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost * 5.0m;
             Assert.AreEqual(expected, result);
         }
@@ -112,7 +112,7 @@ namespace BasketLogicTests
             EveryFourthMilkFree rule = new EveryFourthMilkFree();
             List<BasketItem> basketItems = BasketItemHelper.CreateBasketItems(0, 21, 0);
 
-            decimal result = rule.Apply(basketItems);
+            decimal result = rule.CalculateAdjustment(basketItems);
             decimal expected = -MilkItem.BaseCost * 5.0m;
             Assert.AreEqual(expected, result);
         }

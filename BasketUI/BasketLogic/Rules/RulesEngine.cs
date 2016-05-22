@@ -21,7 +21,7 @@ namespace BasketLogic.Rules
             decimal adjustments = 0.0m;
             foreach(IRule rule in rules)
             {
-                adjustments += rule.Apply(basketItem);
+                adjustments += rule.CalculateAdjustment(basketItem);
             }
             return adjustments;
         }

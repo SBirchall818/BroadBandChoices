@@ -22,11 +22,11 @@ namespace BasketLogicTests
             RulesEngine rulesEngine = new RulesEngine();
             Mock<IRule> mockRuleA = new Mock<IRule>();
             decimal deductionA = 1.0m;
-            mockRuleA.Setup(m => m.Apply(It.IsAny<List<BasketItem>>())).Returns(-deductionA);
+            mockRuleA.Setup(m => m.CalculateAdjustment(It.IsAny<List<BasketItem>>())).Returns(-deductionA);
 
             Mock<IRule> mockRuleB = new Mock<IRule>();
             decimal deductionB = 0.7m;
-            mockRuleB.Setup(m => m.Apply(It.IsAny<List<BasketItem>>())).Returns(-deductionB);
+            mockRuleB.Setup(m => m.CalculateAdjustment(It.IsAny<List<BasketItem>>())).Returns(-deductionB);
 
             List<BasketItem> basketItems = new List<BasketItem>();
 

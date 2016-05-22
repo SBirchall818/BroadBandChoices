@@ -8,7 +8,7 @@ namespace BasketLogic.Rules
 
         #region Interface
 
-        public decimal Apply(IList<BasketItem> basketItems)
+        public decimal CalculateAdjustment(IList<BasketItem> basketItems)
         {
             decimal adjustment = 0.0m;
 
