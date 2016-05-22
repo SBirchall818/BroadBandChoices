@@ -16,12 +16,12 @@ namespace BasketLogic.Rules
 
         #region Interface
 
-        public decimal CalculateAdjustmentsFromRules(List<BasketItem> basketItem, IList<IRule> rules)
+        public decimal CalculateAdjustmentsFromRules(List<BasketItem> basketItems, IList<IRule> rules)
         {
             decimal adjustments = 0.0m;
             foreach(IRule rule in rules)
             {
-                adjustments += rule.CalculateAdjustment(basketItem);
+                adjustments += rule.CalculateAdjustment(basketItems);
             }
             return adjustments;
         }
