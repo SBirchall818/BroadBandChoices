@@ -62,7 +62,7 @@ namespace BasketLogic.Basket
             {
                 total += item.Cost;
             }
-            total += _rulesEngine.ApplyRules(_basketItems, _rules);
+            total += _rulesEngine.CalculateAdjustmentsFromRules(_basketItems, _rules);
             return total;
         }
 

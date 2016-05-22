@@ -5,6 +5,6 @@ namespace BasketLogic.Rules
 {
     public interface IRulesEngine
     {
-        decimal ApplyRules(List<BasketItem> basketItems, IList<IRule> rules);
+        decimal CalculateAdjustmentsFromRules(List<BasketItem> basketItems, IList<IRule> rules);
     }
 }

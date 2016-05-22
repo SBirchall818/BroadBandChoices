@@ -13,7 +13,7 @@ namespace BasketLogicTests
         public void RulesEngineHasApplyRulesMethod()
         {
             Mock<IRulesEngine> mockRulesEngine = new Mock<IRulesEngine>();
-            mockRulesEngine.Setup(m => m.ApplyRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>())).Returns(0.0m);
+            mockRulesEngine.Setup(m => m.CalculateAdjustmentsFromRules(It.IsAny<List<BasketItem>>(), It.IsAny<IList<IRule>>())).Returns(0.0m);
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace BasketLogicTests
             rules.Add(mockRuleA.Object);
             rules.Add(mockRuleB.Object);
 
-            decimal adjustment = rulesEngine.ApplyRules(basketItems, rules);
+            decimal adjustment = rulesEngine.CalculateAdjustmentsFromRules(basketItems, rules);
 
             Assert.AreEqual(-deductionA - deductionB, adjustment);
 
